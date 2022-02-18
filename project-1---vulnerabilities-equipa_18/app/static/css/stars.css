@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* common colors */
+:root {
+   --accent-bg: #BBBBBB;
+   --accent-color: #E52E62;
+}
+
+
+/** buttons */
+.box {
+   border: 1pt solid var(--accent-bg);
+   padding: 0.5em;
+   margin-bottom: 0.4em;
+}
+.rectangle {
+   background-color: var(--accent-bg);
+   padding: 0.5em;
+}
+.rounded, .reset {
+   border: 2px solid var(--accent-color);
+   border-radius: 7px;
+   text-align: center;
+   font-weight: bold;
+   padding: 0.5em 0 0.5em 0;
+   margin: 0.3em;
+   min-width: 9em;
+   height: 3em;
+}
+.reset, .rounded:hover {
+   background-color: transparent;
+   color: var(--accent-color);
+   border-color: var(--accent-color);
+}
+.rounded, .reset:hover {
+   background-color: var(--accent-color);
+   color: white;
+   border-color: white;
+}
+button:hover {
+   box-shadow: 2px 2px white;
+}
+
+/* -- star rating styling -- */
+div.star_rating {
+   float: left;
+}
+
+input.star {
+   border: 0;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   opacity: 0;
+   float: right;
+}
+
+label.star {
+   position: relative;
+   float: right;
+   color: #C8C8C8;
+}
+
+label.star:before {
+   margin: 5px;
+   content: "\f005";
+   font-family: FontAwesome;
+   font-size: 1.5em;
+   color: var(--accent-color);
+   -webkit-user-select: none; /* Safari 3.1+ */
+   -moz-user-select: none; /* Firefox 2+ */
+   -ms-user-select: none; /* IE 10+ */
+   user-select: none;
+}
+
+input.star:checked ~ label.star:before {
+   color: #FFC107;
+}
+
+label.star:hover ~ label.star:before {
+   color: #ffdb70;
+}
+
+label.star:hover:before {
+   color: #FFC107;
+}
